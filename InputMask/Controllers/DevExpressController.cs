@@ -15,6 +15,9 @@ namespace InputMask.Controllers
             db = context;
         }
         public IActionResult Index() => View();
+        [HttpGet]
+        public IActionResult DevExpressControlIndex() => View();
+        [HttpPost]
         public IActionResult DevExpressControlIndex(LamiData lamiData)
         {
             db.Datas.Add(lamiData);

@@ -14,7 +14,7 @@ namespace InputMask.Controllers
         {
             db = context;
         }
-        public IActionResult Index() => View();
+        public IActionResult Index() => View(db.Datas.ToList());
         [HttpGet]
         public IActionResult DevExpressControlIndex() => View();
         [HttpPost]

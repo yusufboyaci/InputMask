@@ -14,8 +14,6 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Number1" class="control-label"></label>
-                @*@(Html.DevExtreme().NumberBoxFor(x => x.Number1).ID("Number1").Format("#,##0.######"))*@
-                @*@(Html.DevExtreme().NumberBoxFor(x => x.Number1).ID("Number1").Format("currency"))*@
                 @(Html.DevExtreme().NumberBoxFor(x => x.Number1).ID("Number1"))
                 <span asp-validation-for="Number1" class="text-danger"></span>
             </div>
@@ -33,7 +31,7 @@
 <script>
   
 
-    DevExpress.localization.locale("de");//virgülü nokta ile yerdeğiştiren kod çok önemli.
+    DevExpress.localization.locale("tr");//virgülü nokta ile yerdeğiştiren kod çok önemli.
 
    
     $(document).ready(function () {
@@ -45,10 +43,14 @@
                     currency: "USD",
                     useGrouping: "always",
                     type: "fixedPoint",
-                    precision: 4
+                    precision: 6
                 }
             }
         );
+        //$('#mask').dxTextBox({
+        //    mask: '+1 (X00) 000-0000',
+        //    maskRules: { X: /[02-9]/ },
+        //});
     });
 </script>
 
